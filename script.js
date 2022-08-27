@@ -5,6 +5,7 @@ const image1 = document.getElementById('image1');
 const image2 = document.getElementById('image2');
 const image3 = document.getElementById('image3');
 const textBox = document.getElementById('text-box');
+const navIcon = document.getElementById('nav-icon');
 
 // Dark or Light Images
 function imageMode(color) {
@@ -15,19 +16,21 @@ function imageMode(color) {
 
 // Dark Mode Styles
 function darkMode() {
-  nav.style.backgroundColor = 'rgb(0 0 0 / 50%)';
+  // nav.style.backgroundColor = 'rgb(0 0 0 / 50%)';
   textBox.style.backgroundColor = 'rgb(255 255 255 / 50%)';
-  toggleIcon.children[0].textContent = 'Dark Mode';
-  toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon');
+  // toggleIcon.children[0].textContent = 'Dark Mode';
+  toggleIcon.children[0].classList.replace('fa-sun', 'fa-moon');
+  navIcon.children[0].classList.replace('text-black', 'text-white');
   imageMode('dark');
 }
 
 // Light Mode Styles
 function lightMode() {
-  nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
+  // nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
   textBox.style.backgroundColor = 'rgb(0 0 0 / 50%)';
-  toggleIcon.children[0].textContent = 'Light Mode';
-  toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
+  // toggleIcon.children[0].textContent = 'Light Mode';
+  toggleIcon.children[0].classList.replace('fa-moon', 'fa-sun');
+  navIcon.children[0].classList.replace('text-white', 'text-black');
   imageMode('light');
 }
 
